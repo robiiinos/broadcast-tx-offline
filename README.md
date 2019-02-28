@@ -1,7 +1,6 @@
 # broadcast-tx-offline
 
 [![NPM](https://img.shields.io/npm/v/broadcast-tx-offline.svg)](https://www.npmjs.com/package/broadcast-tx-offline)
-
 [![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/@bamblehorse/tiny.svg)](https://www.npmjs.com/package/@bamblehorse/tiny)
 
 Broadcast your signed transaction to a cryptocurrency network without a local node.
