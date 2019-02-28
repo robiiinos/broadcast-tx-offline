@@ -1,0 +1,30 @@
+{
+  "name": "broadcast-tx-offline",
+  "version": "0.1.0",
+  "description": "Broadcast your signed transaction to a cryptocurrency network without a local node.",
+  "main": "index.js",
+  "scripts": {
+    "coverage": "nyc --branches 100 --functions 100 --check-coverage npm run unit",
+    "test": "npm run unit",
+    "unit": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/robiiinos/broadcast-tx-offline.git"
+  },
+  "keywords": [
+    "cryptocurrency",
+    "broadcast",
+    "node"
+  ],
+  "author": "D. Robin <dyrda.robin@outlook.fr>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robiiinos/broadcast-tx-offline/issues"
+  },
+  "homepage": "https://github.com/robiiinos/broadcast-tx-offline#readme",
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {}
+}
