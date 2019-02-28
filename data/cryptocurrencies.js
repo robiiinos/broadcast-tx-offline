@@ -1,14 +1,21 @@
 module.exports = {
     bitcoin: [
-        'https://api.blockcypher.com/v1/btc/main/txs/push',
+        [ 'POST', 'tx', 'https://api.blockcypher.com/v1/btc/main/txs/push' ],
+        [ 'POST', 'tx_hex', 'https://chain.so/api/v2/send_tx/BTC/' ],
     ],
     litecoin: [
-        'https://api.blockcypher.com/v1/ltc/main/txs/push',
+        [ 'POST', 'tx', 'https://api.blockcypher.com/v1/ltc/main/txs/push' ],
+        [ 'POST', 'tx_hex', 'https://chain.so/api/v2/send_tx/LTC/' ],
     ],
     dogecoin: [
-        'https://api.blockcypher.com/v1/doge/main/txs/push',
+        [ 'POST', 'tx', 'https://api.blockcypher.com/v1/doge/main/txs/push' ],
+        [ 'POST', 'tx_hex', 'https://chain.so/api/v2/send_tx/DOGE/' ],
     ],
     dash: [
-        'https://api.blockcypher.com/v1/dash/main/txs/push',
+        [ 'POST', 'tx', 'https://api.blockcypher.com/v1/dash/main/txs/push' ],
+        [ 'POST', 'tx_hex', 'https://chain.so/api/v2/send_tx/DASH/' ],
+    ],
+    zcash: [
+        [ 'POST', 'tx_hex', 'https://chain.so/api/v2/send_tx/ZEC/' ],
     ],
 };

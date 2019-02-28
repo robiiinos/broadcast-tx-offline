@@ -1,17 +1,23 @@
 var axios = require('axios');
+var util = require('./util/util');
 var cryptocurrencies = require('./data/cryptocurrencies');
 
 function broadcastTx (cryptocurrency, hash, callback) {
-    cryptocurrencies[cryptocurrency].forEach(url => {
+    cryptocurrencies[cryptocurrency].forEach(row => {
 
-        axios.post(url, {
-            tx: hash,
-          })
+        var payload = {};
+        payload[row[1]] = hash;
+
+        axios.post(row[2], payload)
           .then((response) => {
-              callback(null, response.data.hash)
+            var success = util.parseSuccess(response);
+
+            callback(null, success);
           })
-          .catch((error) => {
-              callback(error.response.data.error, null);
+          .catch((response) => {
+              var error = util.parseError(response);
+
+              callback(error, null);
           });
 
     });
